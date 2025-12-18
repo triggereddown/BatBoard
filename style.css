@@ -622,6 +622,7 @@ nav {
   justify-content: space-between;
   padding: 20px 30px;
   border-radius: 10px;
+  opacity: 90%;
 }
 
 .nav-in h2 {
@@ -648,4 +649,141 @@ nav {
 
 .theme:active {
   scale: 0.96;
+}
+
+@media (max-width: 768px) {
+  html,
+  body {
+    overflow: auto;
+  }
+
+  #main {
+    padding-top: 80px;
+  }
+
+  section.allElems {
+    padding: 20px;
+  }
+
+  /* ---------- NAV ---------- */
+  nav {
+    padding: 15px;
+  }
+
+  .nav-in {
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .nav-in h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .theme {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* ---------- HEADER ---------- */
+  .allElems header {
+    flex-direction: column;
+    gap: 20px;
+    padding: 25px;
+  }
+
+  header .header1 h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+  }
+
+  header .header1 h2,
+  header .header1 h4 {
+    font-size: 22px;
+  }
+
+  header .header2 h2 {
+    font-size: 38px;
+  }
+
+  header .header2 h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  /* ---------- FEATURE CARDS ---------- */
+  .allElems .allFeatures {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .elem {
+    width: 100%;
+    height: 220px;
+  }
+
+  .elem h2 {
+    font-size: 24px;
+  }
+
+  /* ---------- FULL PAGE SECTIONS ---------- */
+  .fullElem {
+    padding: 20px;
+  }
+
+  .back {
+    font-size: 18px;
+    padding: 10px 16px;
+  }
+
+  /* ---------- TODO ---------- */
+  .todo-list-fullpage h2 {
+    font-size: 38px;
+  }
+
+  .todo-list-fullpage .todo-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .todo-list-fullpage .todo-container .addTask,
+  .todo-list-fullpage .todo-container .allTask {
+    width: 100%;
+    height: auto;
+  }
+
+  .todo-container .addTask form input,
+  .todo-container .addTask form textarea {
+    font-size: 18px;
+  }
+
+  /* ---------- MOTIVATION ---------- */
+  .motivational-fullpage .motivation-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .motivation-2 h1 {
+    font-size: 30px;
+  }
+
+  .motivation-3 h2 {
+    font-size: 20px;
+  }
+
+  /* ---------- POMODORO ---------- */
+  .pomo-timer h1 {
+    font-size: 90px;
+  }
+
+  .pomo-timer button {
+    font-size: 20px;
+    padding: 12px 20px;
+  }
+
+  .pomodoro-fullpage .session {
+    font-size: 20px;
+    padding: 10px 20px;
+  }
 }
