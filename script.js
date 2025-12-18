@@ -18,56 +18,6 @@ function openFeatures() {
 
 openFeatures();
 
-let form = document.querySelector(".addTask form");
-let taskInput = document.querySelector(".addTask from input");
-let taskDetailsInput = document.querySelector(".addTask from textarea");
-let taskCheckbox = document.querySelector(".addTask from #check");
-//Learning to map the data
-
-let currentTask = [
-  {
-    task: "Sample Task",
-    details: "This is a sample task description",
-    imp: true,
-  },
-  {
-    task: "Another Task",
-    details: "This is another task description",
-    imp: false,
-  },
-];
-
-function renderTask() {
-  var allTask = document.querySelector(".allTask");
-  var sum = "";
-  currentTask.forEach(function (elem) {
-    sum =
-      sum +
-      `<div class="task>
-  <h5>${elem.task}<span class=${elem.imp}>imp</span></h5>
-  <button>Mark as completed</button>
-  </div>`;
-  });
-  allTask.innerHTML = sum;
-}
-renderTask();
-
-//Learning to map the data
-
-form.addEventListener("submit", function (e) {
-  e.preventDefault();
-  currentTask.push({
-    taskInput: taskInput.value,
-    details: taskDetailsInput.value,
-    imp: taskCheckbox.checked,
-  });
-  renderTask();
-  //Refresh and erase entries after submission
-  taskInput.value = "";
-  taskDetailsInput.value = "";
-  taskCheckbox.checked = false;
-});
-
 // function openFeatures() {
 //     var allElems = document.querySelectorAll('.elem')
 //     var fullElemPage = document.querySelectorAll('.fullElem')
@@ -88,66 +38,63 @@ form.addEventListener("submit", function (e) {
 
 // openFeatures()
 
-// function todoList() {
+function todoList() {
+  var currentTask = [];
 
-//     var currentTask = []
+  if (localStorage.getItem("currentTask")) {
+    currentTask = JSON.parse(localStorage.getItem("currentTask"));
+  } else {
+    console.log("Task list is Empty");
+  }
 
-//     if (localStorage.getItem('currentTask')) {
-//         currentTask = JSON.parse(localStorage.getItem('currentTask'))
-//     } else {
-//         console.log('Task list is Empty');
-//     }
+  function renderTask() {
+    var allTask = document.querySelector(".allTask");
 
-//     function renderTask() {
+    var sum = "";
 
-//         var allTask = document.querySelector('.allTask')
+    currentTask.forEach(function (elem, idx) {
+      sum =
+        sum +
+        `<div class="task">
+        <h5>${elem.task} <span class=${elem.imp}>imp</span></h5>
+        <button id=${idx}>Mark as Completed</button>
+        </div>`;
+    });
 
-//         var sum = ''
+    allTask.innerHTML = sum;
 
-//         currentTask.forEach(function (elem, idx) {
-//             sum = sum + `<div class="task">
-//         <h5>${elem.task} <span class=${elem.imp}>imp</span></h5>
-//         <button id=${idx}>Mark as Completed</button>
-//         </div>`
-//         })
+    localStorage.setItem("currentTask", JSON.stringify(currentTask));
 
-//         allTask.innerHTML = sum
+    document.querySelectorAll(".task button").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        currentTask.splice(btn.id, 1);
+        renderTask();
+      });
+    });
+  }
+  renderTask();
 
-//         localStorage.setItem('currentTask', JSON.stringify(currentTask))
+  let form = document.querySelector(".addTask form");
+  let taskInput = document.querySelector(".addTask form #task-input");
+  let taskDetailsInput = document.querySelector(".addTask form textarea");
+  let taskCheckbox = document.querySelector(".addTask form #check");
 
-//         document.querySelectorAll('.task button').forEach(function (btn) {
-//             btn.addEventListener('click', function () {
-//                 currentTask.splice(btn.id, 1)
-//                 renderTask()
-//             })
-//         })
-//     }
-//     renderTask()
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    currentTask.push({
+      task: taskInput.value,
+      details: taskDetailsInput.value,
+      imp: taskCheckbox.checked,
+    });
+    renderTask();
 
-//     let form = document.querySelector('.addTask form')
-//     let taskInput = document.querySelector('.addTask form #task-input')
-//     let taskDetailsInput = document.querySelector('.addTask form textarea')
-//     let taskCheckbox = document.querySelector('.addTask form #check')
+    taskCheckbox.checked = false;
+    taskInput.value = "";
+    taskDetailsInput.value = "";
+  });
+}
 
-//     form.addEventListener('submit', function (e) {
-//         e.preventDefault()
-//         currentTask.push(
-//             {
-//                 task: taskInput.value,
-//                 details: taskDetailsInput.value,
-//                 imp: taskCheckbox.checked
-//             }
-//         )
-//         renderTask()
-
-//         taskCheckbox.checked = false
-//         taskInput.value = ''
-//         taskDetailsInput.value = ''
-//     })
-
-// }
-
-// todoList()
+todoList();
 
 // function dailyPlanner() {
 //     var dayPlanner = document.querySelector('.day-planner')
