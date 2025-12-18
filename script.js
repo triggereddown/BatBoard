@@ -361,35 +361,100 @@ function weatherFunctionality() {
 weatherFunctionality();
 
 // function changeTheme() {
+//   var theme = document.querySelector(".theme");
+//   var rootElement = document.documentElement;
 
-//     var theme = document.querySelector('.theme')
-//     var rootElement = document.documentElement
-
-//     var flag = 0
-//     theme.addEventListener('click', function () {
-
-//         if (flag == 0) {
-//             rootElement.style.setProperty('--pri', '#F8F4E1')
-//             rootElement.style.setProperty('--sec', '#222831')
-//             rootElement.style.setProperty('--tri1', '#948979')
-//             rootElement.style.setProperty('--tri2', '#393E46')
-//             flag = 1
-//         } else if (flag == 1) {
-//             rootElement.style.setProperty('--pri', '#F1EFEC')
-//             rootElement.style.setProperty('--sec', '#030303')
-//             rootElement.style.setProperty('--tri1', '#D4C9BE')
-//             rootElement.style.setProperty('--tri2', '#123458')
-//             flag = 2
-//         } else if (flag == 2) {
-//             rootElement.style.setProperty('--pri', '#F8F4E1')
-//             rootElement.style.setProperty('--sec', '#381c0a')
-//             rootElement.style.setProperty('--tri1', '#FEBA17')
-//             rootElement.style.setProperty('--tri2', '#74512D')
-//             flag = 0
-//         }
-
-//     })
-
+//   var flag = 0;
+//   theme.addEventListener("click", function () {
+//     if (flag == 0) {
+//       rootElement.style.setProperty("--pri", "#F8F4E1");
+//       rootElement.style.setProperty("--sec", "#222831");
+//       rootElement.style.setProperty("--tri1", "#948979");
+//       rootElement.style.setProperty("--tri2", "#393E46");
+//       flag = 1;
+//     } else if (flag == 1) {
+//       rootElement.style.setProperty("--pri", "#F1EFEC");
+//       rootElement.style.setProperty("--sec", "#030303");
+//       rootElement.style.setProperty("--tri1", "#D4C9BE");
+//       rootElement.style.setProperty("--tri2", "#123458");
+//       flag = 2;
+//     } else if (flag == 2) {
+//       rootElement.style.setProperty("--pri", "#F8F4E1");
+//       rootElement.style.setProperty("--sec", "#381c0a");
+//       rootElement.style.setProperty("--tri1", "#FEBA17");
+//       rootElement.style.setProperty("--tri2", "#74512D");
+//       flag = 0;
+//     }
+//   });
 // }
 
-// changeTheme()
+// changeTheme();
+
+function changeTheme() {
+  var theme = document.querySelector(".theme");
+  var rootElement = document.documentElement;
+
+  // Select all feature images
+  var featureImages = document.querySelectorAll(".allFeatures img");
+
+  // Image sets for each theme (order matters)
+  var themeImages = [
+    // Theme 0
+    [
+      "https://images.unsplash.com/photo-1611526114392-8d8e229f511d",
+      "https://images.unsplash.com/photo-1630421408187-014cbfdb965d",
+      "https://images.unsplash.com/photo-1694747993968-c5beea3b5c88",
+      "https://images.unsplash.com/photo-1542410613-d073472c3135",
+      "https://i.pinimg.com/1200x/31/3c/de/313cde3d2abe354a865386ec22750100.jpg",
+    ],
+
+    // Theme 1
+    [
+      "https://images.unsplash.com/photo-1563564120768-da63ef4f7446?q=80&w=1168&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1632179008519-c1dd068f9bdc?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1590171275368-bb7d215b2519?q=80&w=1154&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://plus.unsplash.com/premium_photo-1675848493910-5474ee04c3e3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "https://images.unsplash.com/photo-1667592157310-2fea7127ce8b?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    ],
+
+    // Theme 2
+    [
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7",
+      "https://images.unsplash.com/photo-1509042239860-f550ce710b93",
+      "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4",
+      "https://images.unsplash.com/photo-1500534314209-a25ddb2bd429",
+    ],
+  ];
+
+  var flag = 0;
+
+  theme.addEventListener("click", function () {
+    if (flag === 0) {
+      rootElement.style.setProperty("--pri", "#F1EFEC");
+      rootElement.style.setProperty("--sec", "#f10adaff");
+      rootElement.style.setProperty("--tri1", "#fc8ff1ff");
+      rootElement.style.setProperty("--tri2", "#feb1faff");
+
+      flag = 1;
+    } else if (flag === 1) {
+      rootElement.style.setProperty("--pri", "#F8F4E1");
+      rootElement.style.setProperty("--sec", "#222831");
+      rootElement.style.setProperty("--tri1", "#948979");
+      rootElement.style.setProperty("--tri2", "#393E46");
+      flag = 2;
+    } else {
+      rootElement.style.setProperty("--pri", "#F8F4E1");
+      rootElement.style.setProperty("--sec", "#321b0fff");
+      rootElement.style.setProperty("--tri1", "#c48f13ff");
+      rootElement.style.setProperty("--tri2", "#291e14ff");
+      flag = 0;
+    }
+
+    featureImages.forEach(function (img, index) {
+      img.src = themeImages[flag][index];
+    });
+  });
+}
+
+changeTheme();
