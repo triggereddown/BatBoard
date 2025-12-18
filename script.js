@@ -138,12 +138,40 @@ function dailyPlanner() {
 
 dailyPlanner();
 
+function motivationalQuotes() {
+  var motivationalQuoteContent = document.querySelector(".motivation-2 h1");
+  var motivationaalAuthor = document.querySelector(".motivation-3 h2");
+
+  async function fetchQuote() {
+    try {
+      let response = await fetch(
+        "https://api.api-ninjas.com/v2/quotes?categories=success,wisdom",
+        {
+          method: "GET",
+          headers: {
+            "X-Api-Key": "1ZfcuJQ517iU5MM/hnOP4A==LAopVZTdswFKeV3n",
+          },
+        }
+      );
+      let data = await response.json();
+      motivationalQuoteContent.innerHTML = data[0].quote;
+      motivationaalAuthor.innerHTML = data[0].author;
+    } catch (err) {
+      console.log(err);
+      motivationalQuoteContent = "Batman is the best motivator";
+      motivationaalAuthor = "Trigger Batman";
+    }
+  }
+  fetchQuote();
+}
+motivationalQuotes();
+
 // function motivationalQuote() {
 //     var motivationQuoteContent = document.querySelector('.motivation-2 h1')
 //     var motivationAuthor = document.querySelector('.motivation-3 h2')
 
 //     async function fetchQuote() {
-//         let response = await fetch('https://api.quotable.io/random')
+//         let response = await fetch('https://zenquotes.io/api/random')
 //         let data = await response.json()
 
 //         motivationQuoteContent.innerHTML = data.content
