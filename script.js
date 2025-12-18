@@ -18,6 +18,56 @@ function openFeatures() {
 
 openFeatures();
 
+let form = document.querySelector(".addTask form");
+let taskInput = document.querySelector(".addTask from input");
+let taskDetailsInput = document.querySelector(".addTask from textarea");
+let taskCheckbox = document.querySelector(".addTask from #check");
+//Learning to map the data
+
+let currentTask = [
+  {
+    task: "Sample Task",
+    details: "This is a sample task description",
+    imp: true,
+  },
+  {
+    task: "Another Task",
+    details: "This is another task description",
+    imp: false,
+  },
+];
+
+function renderTask() {
+  var allTask = document.querySelector(".allTask");
+  var sum = "";
+  currentTask.forEach(function (elem) {
+    sum =
+      sum +
+      `<div class="task>
+  <h5>${elem.task}<span class=${elem.imp}>imp</span></h5>
+  <button>Mark as completed</button>
+  </div>`;
+  });
+  allTask.innerHTML = sum;
+}
+renderTask();
+
+//Learning to map the data
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+  currentTask.push({
+    taskInput: taskInput.value,
+    details: taskDetailsInput.value,
+    imp: taskCheckbox.checked,
+  });
+  renderTask();
+  //Refresh and erase entries after submission
+  taskInput.value = "";
+  taskDetailsInput.value = "";
+  taskCheckbox.checked = false;
+});
+
 // function openFeatures() {
 //     var allElems = document.querySelectorAll('.elem')
 //     var fullElemPage = document.querySelectorAll('.fullElem')
