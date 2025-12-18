@@ -96,39 +96,47 @@ function todoList() {
 
 todoList();
 
-// function dailyPlanner() {
-//     var dayPlanner = document.querySelector('.day-planner')
+function dailyPlanner() {}
 
-//     var dayPlanData = JSON.parse(localStorage.getItem('dayPlanData')) || {}
+dailyPlanner();
 
-//     var hours = Array.from({ length: 18 }, (_, idx) => `${6 + idx}:00 - ${7 + idx}:00`)
+function dailyPlanner() {
+  var dayPlanner = document.querySelector(".day-planner");
 
-//     var wholeDaySum = ''
-//     hours.forEach(function (elem, idx) {
+  var dayPlanData = JSON.parse(localStorage.getItem("dayPlanData")) || {};
 
-//         var savedData = dayPlanData[idx] || ''
+  var hours = Array.from(
+    { length: 18 },
+    (_, idx) => `${6 + idx}:00 - ${7 + idx}:00`
+  );
 
-//         wholeDaySum = wholeDaySum + `<div class="day-planner-time">
-//     <p>${elem}</p>
-//     <input id=${idx} type="text" placeholder="..." value=${savedData}>
-// </div>`
-//     })
+  var wholeDaySum = "";
+  hours.forEach(function (elem, idx) {
+    var savedData = dayPlanData[idx] || "";
 
-//     dayPlanner.innerHTML = wholeDaySum
+    wholeDaySum =
+      wholeDaySum +
+      `<div class="day-planner-time">
+    <p>${elem}</p>
+    <input id=${idx} type="text" placeholder="..." value=${savedData}>
+</div>`;
+  });
 
-//     var dayPlannerInput = document.querySelectorAll('.day-planner input')
+  dayPlanner.innerHTML = wholeDaySum;
 
-//     dayPlannerInput.forEach(function (elem) {
-//         elem.addEventListener('input', function () {
-//             console.log('hello');
-//             dayPlanData[elem.id] = elem.value
+  var dayPlannerInput = document.querySelectorAll(".day-planner input");
 
-//             localStorage.setItem('dayPlanData', JSON.stringify(dayPlanData))
-//         })
-//     })
-// }
+  dayPlannerInput.forEach(function (elem) {
+    elem.addEventListener("input", function () {
+      //console.log('hello');
+      dayPlanData[elem.id] = elem.value;
 
-// dailyPlanner()
+      localStorage.setItem("dayPlanData", JSON.stringify(dayPlanData));
+    });
+  });
+}
+
+dailyPlanner();
 
 // function motivationalQuote() {
 //     var motivationQuoteContent = document.querySelector('.motivation-2 h1')
