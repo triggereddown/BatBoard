@@ -436,11 +436,9 @@ function changeTheme() {
       rootElement.style.setProperty("--tri1", "#fc8ff1ff");
       rootElement.style.setProperty("--tri2", "#feb1faff");
 
-      // 👇 BACKGROUND (PINK)
       document.querySelector("#main").style.background =
         "linear-gradient(135deg, #f10adaff, #feb1faff)";
 
-      // 👇 NAV BAR (PINK)
       document.querySelector(".nav-in").style.background =
         "linear-gradient(135deg, #f10adaff, #fc8ff1ff)";
 
@@ -451,11 +449,9 @@ function changeTheme() {
       rootElement.style.setProperty("--tri1", "#948979");
       rootElement.style.setProperty("--tri2", "#393E46");
 
-      // 👇 BACKGROUND (DARK)
       document.querySelector("#main").style.background =
         "linear-gradient(135deg, #222831, #000000)";
 
-      // 👇 NAV BAR (DARK)
       document.querySelector(".nav-in").style.background =
         "linear-gradient(135deg, #222831, #393E46)";
 
@@ -466,11 +462,9 @@ function changeTheme() {
       rootElement.style.setProperty("--tri1", "#c48f13ff");
       rootElement.style.setProperty("--tri2", "#291e14ff");
 
-      // 👇 BACKGROUND (BATMAN)
       document.querySelector("#main").style.background =
         "linear-gradient(135deg, #000000, #291e14ff)";
 
-      // 👇 NAV BAR (BATMAN)
       document.querySelector(".nav-in").style.background =
         "linear-gradient(135deg, #291e14ff, #000000)";
 

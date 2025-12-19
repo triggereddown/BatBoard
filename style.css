@@ -651,11 +651,6 @@ nav {
   scale: 0.96;
 }
 
-/* ===============================
-   GLASSMORPHISM + BATMAN VIBES
-   =============================== */
-
-/* Global glass effect helper */
 .glass {
   background: rgba(20, 25, 35, 0.55);
   backdrop-filter: blur(18px);
@@ -664,7 +659,6 @@ nav {
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
 }
 
-/* MAIN BACKGROUND – darker, cinematic */
 #main {
   background: radial-gradient(circle at top, #0b132b, #000000 70%);
 }
