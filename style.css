@@ -651,6 +651,147 @@ nav {
   scale: 0.96;
 }
 
+/* ===============================
+   GLASSMORPHISM + BATMAN VIBES
+   =============================== */
+
+/* Global glass effect helper */
+.glass {
+  background: rgba(20, 25, 35, 0.55);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* MAIN BACKGROUND – darker, cinematic */
+#main {
+  background: radial-gradient(circle at top, #0b132b, #000000 70%);
+}
+
+/* NAVBAR GLASS */
+.nav-in {
+  background: rgba(15, 20, 30, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+}
+
+/* THEME BUTTON – neon yellow accent */
+.theme {
+  background: rgba(254, 186, 23, 0.85);
+  box-shadow: 0 0 15px rgba(254, 186, 23, 0.6);
+}
+
+.theme h4 {
+  color: #000;
+}
+
+/* HEADER GLASS OVER IMAGE */
+.allElems header {
+  background-blend-mode: overlay;
+  background-color: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* FEATURE CARDS – GLASS TILES */
+.elem {
+  background: rgba(20, 25, 40, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+}
+
+.elem img {
+  filter: brightness(0.75) contrast(1.1);
+}
+
+.elem h2 {
+  color: #feba17;
+  text-shadow: 0 0 10px rgba(254, 186, 23, 0.6);
+}
+
+/* FULL PAGE PANELS */
+.fullElem {
+  background: rgba(5, 10, 20, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/* CLOSE BUTTON – danger accent */
+.back {
+  background: linear-gradient(135deg, #ff3b3b, #b00000);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* TODO PANELS */
+.todo-list-fullpage .addTask,
+.todo-list-fullpage .allTask,
+.daily-planner-fullpage .day-planner {
+  background: rgba(20, 25, 40, 0.6);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* INPUTS – glass fields */
+.todo-container input,
+.todo-container textarea,
+.day-planner input {
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.todo-container input::placeholder,
+.todo-container textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* TASK CARDS */
+.task {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* MOTIVATION CARD – premium glass */
+.motivation-wrapper {
+  background: rgba(15, 20, 30, 0.65) !important;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 2px solid rgba(254, 186, 23, 0.35);
+  box-shadow: 0 0 40px rgba(254, 186, 23, 0.35);
+}
+
+.motivation-2 h1 {
+  color: #feba17;
+  text-shadow: 0 0 20px rgba(254, 186, 23, 0.6);
+}
+
+/* POMODORO BUTTONS – neon edge */
+.pomo-timer button {
+  background: rgba(20, 25, 40, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(254, 186, 23, 0.5);
+  color: #feba17;
+  box-shadow: 0 0 15px rgba(254, 186, 23, 0.4);
+}
+
+/* SESSION BADGE */
+.session {
+  background: rgba(0, 191, 255, 0.85);
+  box-shadow: 0 0 20px rgba(0, 191, 255, 0.6);
+}
+
+/* Phone version */
+
 @media (max-width: 768px) {
   html,
   body {
