@@ -2,10 +2,12 @@
 
 An AI-assisted productivity dashboard built using HTML, CSS, and JavaScript, designed to help users manage daily tasks, track expenses, stay motivated, plan their day, and improve focus using a Pomodoro timer. The application features a modern UI, theme switching, mobile responsiveness, and API integrations for real-time data.
 
-📸 Screenshots
-<img width="1837" height="883" alt="image" src="https://github.com/user-attachments/assets/4df3c061-c6ab-4992-8466-21a469d1d2db" />
+## 📸 Screenshots
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/df59f760-94c7-42e0-8fec-2ade12153e7f" />
 
-<img width="1852" height="838" alt="image" src="https://github.com/user-attachments/assets/1b0f173e-2e26-4088-a8f1-9ff34e207499" />
+
+<img width="1000" height="600" alt="image" src="https://github.com/user-attachments/assets/50b12e61-54c1-4fe2-84d5-3944064a0cf8" />
+
 
 ## 🚀 Features
 ✅ Task Management (To-Do List)
