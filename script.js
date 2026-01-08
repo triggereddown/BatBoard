@@ -463,7 +463,7 @@ function changeTheme() {
       rootElement.style.setProperty("--tri2", "");
 
       document.querySelector("#main").style.background =
-        "linear-gradient(135deg, #ed62d4ff, #818cf8)";
+        "linear-gradient(135deg, #ffb514ff, #ffae00ff)";
 
       document.querySelector(".nav-in").style.background =
         "linear-gradient(135deg, #818cf8, #6574faff)";
