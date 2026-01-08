@@ -299,6 +299,13 @@ header h1 {
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .allFeatures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
   .todo-container {
     flex-direction: column;
     height: auto;
