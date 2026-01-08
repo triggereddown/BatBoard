@@ -432,20 +432,20 @@ function changeTheme() {
   theme.addEventListener("click", function () {
     if (flag === 0) {
       rootElement.style.setProperty("--pri", "#F1EFEC");
-      rootElement.style.setProperty("--sec", "#f10adaff");
-      rootElement.style.setProperty("--tri1", "#fc8ff1ff");
-      rootElement.style.setProperty("--tri2", "#feb1faff");
+      rootElement.style.setProperty("--sec", "#ff00aaff");
+      rootElement.style.setProperty("--tri1", "#ffe600ff");
+      rootElement.style.setProperty("--tri2", "#00bbffff");
 
       document.querySelector("#main").style.background =
         "linear-gradient(135deg, #f10adaff, #feb1faff)";
 
       document.querySelector(".nav-in").style.background =
-        "linear-gradient(135deg, #f10adaff, #fc8ff1ff)";
+        "linear-gradient(135deg, rgba(245, 159, 255, 1), #ffdff8ff)";
 
       flag = 1;
     } else if (flag === 1) {
       rootElement.style.setProperty("--pri", "#F8F4E1");
-      rootElement.style.setProperty("--sec", "#222831");
+      rootElement.style.setProperty("--sec", "#818cf8");
       rootElement.style.setProperty("--tri1", "#948979");
       rootElement.style.setProperty("--tri2", "#393E46");
 
@@ -460,13 +460,13 @@ function changeTheme() {
       rootElement.style.setProperty("--pri", "#F8F4E1");
       rootElement.style.setProperty("--sec", "#321b0fff");
       rootElement.style.setProperty("--tri1", "#c48f13ff");
-      rootElement.style.setProperty("--tri2", "#291e14ff");
+      rootElement.style.setProperty("--tri2", "");
 
       document.querySelector("#main").style.background =
-        "linear-gradient(135deg, #000000, #291e14ff)";
+        "linear-gradient(135deg, #ed62d4ff, #818cf8)";
 
       document.querySelector(".nav-in").style.background =
-        "linear-gradient(135deg, #291e14ff, #000000)";
+        "linear-gradient(135deg, #818cf8, #6574faff)";
 
       flag = 0;
     }
