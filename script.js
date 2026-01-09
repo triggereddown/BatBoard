@@ -53,12 +53,14 @@ function todoList() {
     var sum = "";
 
     currentTask.forEach(function (elem, idx) {
+      let importanceClass = elem.imp ? "important-task" : "";
+
       sum =
         sum +
-        `<div class="task">
-        <h5>${elem.task} <span class=${elem.imp}>imp</span></h5>
+        `<div class="task ${importanceClass}">
+        <h5>${elem.task} <span class="${elem.imp}">imp</span></h5>
         <button id=${idx}>Mark as Completed</button>
-        </div>`;
+    </div>`;
     });
 
     allTask.innerHTML = sum;

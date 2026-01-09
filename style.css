@@ -219,6 +219,41 @@ header h1 {
   color: white;
 }
 
+/*  important task contain*/
+.task.important-task {
+  background: var(--accent) !important;
+  border: 4px solid var(--red) !important;
+}
+
+.task h5 span.true {
+  background: var(--red);
+  color: white;
+  padding: 2px 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  border: 1px solid #000;
+}
+
+.task h5 span.false {
+  display: none;
+}
+
+.mark-imp label {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+/* Optional: Make the checkbox itself a bit larger to match */
+.mark-imp input[type="checkbox"] {
+  transform: scale(1.5); /* Increases checkbox size by 50% */
+  cursor: pointer;
+}
+
 /* ---  POMODORO --- */
 .pomodoro-fullpage {
   background: var(--blue);
